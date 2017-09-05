@@ -49,6 +49,7 @@
 % **************************************************
 % Load and Configure Packages
 % **************************************************
+\usepackage{ae,lmodern}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{booktabs}
@@ -105,9 +106,6 @@
 \includepdf[pages=-, fitpaper=true]{content/composante_lyon1.pdf}
 \cleardoublepage
 
-% \includepdf[pages=-]{content/citation.pdf}
-% \cleardoublepage
-
 \pagestyle{plain}				% display just page numbers
 % \input{content/abstract}		% INCLUDE: the abstracts (english and french)
 % \cleardoublepage
@@ -118,6 +116,15 @@
 \setcounter{tocdepth}{1}		% define depth of toc
 \tableofcontents				% display table of contents
 \cleardoublepage
+
+\listoffigures
+\cleardoublepage
+
+\listoftables
+\cleardoublepage
+
+% \input{content/colophon}
+% \cleardoublepage
 
 % --------------------------
 % Body matter
@@ -130,22 +137,21 @@
 % \cleardoublepage
 
 \part{GENERAL INTRODUCTION}
-\input{content/intro-1-dream-research}
-\cleardoublepage
-\input{content/intro-2-dream-recall}
-\cleardoublepage
-\input{content/intro-3-dream-content}
+\input{content/intro-1-dream-research} \cleardoublepage
+\input{content/intro-2-dream-recall} \cleardoublepage
+\input{content/intro-3-dream-content} \cleardoublepage
+\input{content/intro-4-dream-function} \cleardoublepage
+\input{content/intro-5-problematic}
 
 \cleardoublepage
 \part{METHODS}
-%\input{content/chapter-related-work} 		% INCLUDE: related work
-
-% \includepdf[pages=-, pagecommand={\thispagestyle{plain}}]{article/Vallat_2017_FHN.pdf}
-
-%\input{content/chapter-conclusion} 			% INCLUDE: conclusion
+\input{content/method-1-eeg} \cleardoublepage
+\input{content/method-2-fMRI}
 
 \cleardoublepage
 \part{EXPERIMENTAL RESULTS}
+
+% \includepdf[pages=-, pagecommand={\thispagestyle{plain}}]{article/Vallat_2017_FHN.pdf}
 
 % --------------------------
 % Back matter
@@ -162,14 +168,6 @@
 }
 \cleardoublepage
 
-% \listoffigures
-% \cleardoublepage
-%
-% \listoftables
-% \cleardoublepage
-
-% \input{content/colophon}
-% \cleardoublepage
 
 % \input{content/declaration}
 % \clearpage
