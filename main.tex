@@ -1,0 +1,182 @@
+%% LLT: Turn off some annoying warnings...
+\RequirePackage{silence}
+\WarningFilter{titlesec}{Non standard sectioning command}
+\WarningFilter{scrreprt}{Usage of package}
+\WarningFilter{scrreprt}{Activating an ugly workaround}
+
+% **************************************************
+% Document Class Definition
+% **************************************************
+\documentclass[%
+	paper=A4,						% paper size
+	twoside=true,					% onesite or twoside printing
+	openright,						% doublepage cleaning ends up right side
+	parskip=full,					% spacing value / method for paragraphs
+	chapterprefix=true,				% prefix for chapter marks
+	11pt,							% font size
+	headings=normal,				% size of headings
+	bibliography=totoc,				% include bib in toc
+	listof=totoc,					% include listof entries in toc
+	titlepage=on,					% own page for each title page
+	captions=tableabove,			% display table captions above the float env
+	draft=false,					% value for draft version
+]{scrreprt}%
+
+% **************************************************
+% Debug LaTeX Information
+% **************************************************
+%\listfiles
+
+% **************************************************
+% Information and Commands for Reuse
+% **************************************************
+\newcommand{\thesisTitle}{Content and frequency of dream reports. Psychological and neurophysiological correlates.}
+\newcommand{\thesisName}{Raphael Vallat}
+\newcommand{\thesisSubject}{Neuroscience}
+\newcommand{\thesisDate}{December 19, 2017}
+\newcommand{\thesisVersion}{1a}
+
+\newcommand{\thesisUniversity}{\protect{Lyon 1 University}}
+\newcommand{\thesisUniversityDepartment}{Department of Biology}
+\newcommand{\thesisUniversityInstitute}{Lyon Neuroscience Research Center}
+\newcommand{\thesisUniversityGroup}{Brain Dynamics and Cognition}
+\newcommand{\thesisUniversityCity}{Lyon}
+\newcommand{\thesisUniversityStreetAddress}{43 Boulevard du 11 Novembre 1918}
+\newcommand{\thesisUniversityPostalCode}{69100 Villeurbanne}
+
+\newcommand{\q}[1]{\textit{``#1''}} 	% Quote
+
+% **************************************************
+% Load and Configure Packages
+% **************************************************
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[english]{babel} 	% babel system, adjust the language of the content
+\usepackage{pdfpages}
+\usepackage[					% clean thesis style
+	figuresep=colon,
+	sansserif=false,
+	hangfigurecaption=false,
+	hangsection=true,
+	hangsubsection=true,
+	colorize=reduced,
+	colortheme=bluemagenta,
+	% LLT: Use biber if using UTF8 encoding
+	% bibsys=bibtex,
+	bibsys=biber,
+	bibfile=bib-refs,
+	bibstyle=authoryear,
+]{cleanthesis}
+
+\hypersetup{							% setup the hyperref-package options
+	pdftitle={\thesisTitle},			% 	- title (PDF meta)
+	pdfsubject={\thesisSubject},		% 	- subject (PDF meta)
+	pdfauthor={\thesisName},			% 	- author (PDF meta)
+	plainpages=false,					% 	-
+	colorlinks=false,					% 	- colorize links?
+	pdfborder={0 0 0},					% 	-
+	breaklinks=true,					% 	- allow line break inside links
+	bookmarksnumbered=true,				%
+	bookmarksopen=true					%
+}
+
+% **************************************************
+% Document CONTENT
+% **************************************************
+\begin{document}
+
+% --------------------------
+% rename document parts
+% --------------------------
+\renewcaptionname{english}{\figurename}{Fig.}
+\renewcaptionname{english}{\tablename}{Table}
+
+% --------------------------
+% Front matter
+% --------------------------
+\pagenumbering{roman}			% roman page numbing (invisible for empty page style)
+\pagestyle{empty}				% no header or footers
+\input{content/garde}			% INCLUDE: Title page Lyon 1 University
+\cleardoublepage
+
+\includepdf[pages=-, fitpaper=true]{content/composante_lyon1.pdf}
+\cleardoublepage
+
+% \includepdf[pages=-]{content/citation.pdf}
+% \cleardoublepage
+
+\pagestyle{plain}				% display just page numbers
+% \input{content/abstract}		% INCLUDE: the abstracts (english and french)
+% \cleardoublepage
+% %
+% \input{content/acknowledgement} % INCLUDE: acknowledgement
+% \cleardoublepage
+%
+\setcounter{tocdepth}{1}		% define depth of toc
+\tableofcontents				% display table of contents
+\cleardoublepage
+
+% --------------------------
+% Body matter
+% --------------------------
+\pagenumbering{arabic}						% arabic page numbering
+\setcounter{page}{1}						% set page counter
+\pagestyle{maincontentstyle} 				% fancy header and footer
+
+% \includepdf[pages=-, pagecommand={\thispagestyle{plain}}]{content/grandville.pdf}
+% \cleardoublepage
+
+\part{GENERAL INTRODUCTION}
+\input{content/intro-1-dream-research}
+\cleardoublepage
+\input{content/intro-2-dream-recall}
+\cleardoublepage
+\input{content/intro-3-dream-content}
+
+\cleardoublepage
+\part{METHODS}
+%\input{content/chapter-related-work} 		% INCLUDE: related work
+
+% \includepdf[pages=-, pagecommand={\thispagestyle{plain}}]{article/Vallat_2017_FHN.pdf}
+
+%\input{content/chapter-conclusion} 			% INCLUDE: conclusion
+
+\cleardoublepage
+\part{EXPERIMENTAL RESULTS}
+
+% --------------------------
+% Back matter
+% --------------------------
+\cleardoublepage
+\part{REFERENCES}
+{%
+\setstretch{1.1}
+\renewcommand{\bibfont}{\normalfont\small}
+\setlength{\biblabelsep}{0pt}
+\setlength{\bibitemsep}{0.5\baselineskip plus 0.5\baselineskip}
+\printbibliography[nottype=online]
+% \printbibliography[heading=subbibliography,title={Website},type=online,prefixnumbers={@}]
+}
+\cleardoublepage
+
+% \listoffigures
+% \cleardoublepage
+%
+% \listoftables
+% \cleardoublepage
+
+% \input{content/colophon}
+% \cleardoublepage
+
+% \input{content/declaration}
+% \clearpage
+% \newpage
+% \mbox{}
+
+% **************************************************
+% End of Document CONTENT
+% **************************************************
+\end{document}
