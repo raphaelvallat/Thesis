@@ -51,7 +51,6 @@
 % **************************************************
 \usepackage[utf8]{inputenc}
 \usepackage{booktabs}
-\usepackage{graphicx}
 \usepackage{tabularx}
 \usepackage[english]{babel} 	% babel system, adjust the language of the content
 \usepackage{pdfpages}
@@ -91,7 +90,7 @@
 % rename document parts
 % --------------------------
 \renewcaptionname{english}{\figurename}{Fig.}
-\renewcaptionname{english}{\tablename}{Table}
+% \renewcaptionname{english}{\tablename}{Table}
 
 % --------------------------
 % Front matter
@@ -101,16 +100,13 @@
 \input{content/garde}			% INCLUDE: Title page Lyon 1 University
 \cleardoublepage
 
-\includepdf[pages=-, fitpaper=true]{content/composante_lyon1.pdf}
-\cleardoublepage
-
 \pagestyle{plain}				% display just page numbers
 % \input{content/abstract}		% INCLUDE: the abstracts (english and french)
 % \cleardoublepage
-% %
+
 % \input{content/acknowledgement} % INCLUDE: acknowledgement
 % \cleardoublepage
-%
+
 \setcounter{tocdepth}{1}		% define depth of toc
 \tableofcontents				% display table of contents
 \cleardoublepage
@@ -121,9 +117,6 @@
 \listoftables
 \cleardoublepage
 
-% \input{content/colophon}
-% \cleardoublepage
-
 % --------------------------
 % Body matter
 % --------------------------
@@ -131,48 +124,41 @@
 \setcounter{page}{1}						% set page counter
 \pagestyle{maincontentstyle} 				% fancy header and footer
 
-% \includepdf[pages=-, pagecommand={\thispagestyle{plain}}]{content/grandville.pdf}
-% \cleardoublepage
-
-\part{GENERAL INTRODUCTION}
+\part{GENERAL INTRODUCTION} \cleardoublepage
 \input{content/intro-1-dream-research} \cleardoublepage
 \input{content/intro-2-dream-recall} \cleardoublepage
 \input{content/intro-3-dream-content} \cleardoublepage
 \input{content/intro-4-dream-function} \cleardoublepage
-\input{content/intro-5-problematic}
+\input{content/intro-5-problematic} \cleardoublepage
 
-\cleardoublepage
-\part{METHODS}
+\part{METHODS} \cleardoublepage
 \input{content/method-1-eeg} \cleardoublepage
-\input{content/method-2-fMRI}
+\input{content/method-2-fMRI} \cleardoublepage
+
+\part{EXPERIMENTAL RESULTS} \cleardoublepage
+\input{content/results-1-arousal} \cleardoublepage
+
+\part{GENERAL DISCUSSION} \cleardoublepage
 
 \cleardoublepage
-\part{EXPERIMENTAL RESULTS}
-
-% \includepdf[pages=-, pagecommand={\thispagestyle{plain}}]{article/Vallat_2017_FHN.pdf}
-
 % --------------------------
 % Back matter
 % --------------------------
-\cleardoublepage
-\part{REFERENCES}
-{%
+\part{REFERENCES} \cleardoublepage
+{
 \setstretch{1.1}
 \renewcommand{\bibfont}{\normalfont\small}
 \setlength{\biblabelsep}{0pt}
 \setlength{\bibitemsep}{0.5\baselineskip plus 0.5\baselineskip}
-\printbibliography[nottype=online]
-% \printbibliography[heading=subbibliography,title={Website},type=online,prefixnumbers={@}]
+\printbibliography[nottype=online, heading=bibnumbered]
+%\printbibliography[heading=subbibliography,title={Website},type=online,prefixnumbers={@}]
 }
+
 \cleardoublepage
-
-
-% \input{content/declaration}
-% \clearpage
-% \newpage
-% \mbox{}
+\input{content/colophon}
 
 % **************************************************
 % End of Document CONTENT
 % **************************************************
+\cleardoublepage
 \end{document}

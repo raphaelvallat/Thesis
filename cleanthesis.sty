@@ -234,16 +234,16 @@
 \RequirePackage[]{graphicx}			% graphics import features
 \RequirePackage{fancyhdr}			% for header and footer modifications
 \RequirePackage{enumitem}			% for simple list modifications
-\RequirePackage{blindtext}		% package for blind text
+\RequirePackage{blindtext}			% package for blind text
 \RequirePackage{textcomp}			% different symbols
 \RequirePackage{hyperref} 			% interactive link inside the document
 
 %
-\RequirePackage[					% modify figure and table captions
-	font={small}, 					% 	- small font size
-	labelfont={bf,sf,color=ctcolorfloatlabel},% 	- label in bold, sans-serif and magenta
+\RequirePackage[								% modify figure and table captions
+	font={small}, 								% 	- small font size
+	labelfont={bf,sf,color=ctcolorfloatlabel},	% 	- label in bold, sans-serif and magenta
 	labelsep=\cthesis@figuresep,				% 	- separator: none, colon, period, space, quad, newline, endash
-	singlelinecheck=false			% 	- no centered single-lined captions
+	singlelinecheck=false						% 	- no centered single-lined captions
 ]{caption}[2008/08/24]
 %\ifthenelse{\boolean{@figurecaptionoutside}}%
 \ifct@cthesis@hangfigurecaption
@@ -423,52 +423,51 @@
 % TODO command
 \definecolor{color_todo}{rgb}{.6,.8,.2}
 \newcommand{\TODO}[1]{{\color{color_todo}\textbf{[TODO #1]}}}
-%
-%
-% ref commands, e.g. for images, tables and text labels
-% --------------------------------------------------
-% RESULT = (siehe Tab. 12.4)
-\newcommand{\tabref}[1]{(see Table ~\ref{#1})}
-%
-% RESULT = (siehe Tab. 12.4)
-\newcommand{\tableref}[1]{(see Table ~\ref{#1} Seite~\pageref{#1})}
-%
-% --------------------------------------------------
-% RESULT = (siehe 3.4)
-\newcommand{\tref}[1]{(siehe \ref{#1})}
-%
-% RESULT = Abschnitt 3.4
-\newcommand{\treft}[1]{Abschnitt~\ref{#1}}
-%
-% RESULT = (siehe 3.4, Seite 12)
-\newcommand{\textref}[1]{(siehe \ref{#1}, Seite~\pageref{#1})}
-%
-% RESULT = Abschnitt 3.4 (siehe Seite 12)
-\newcommand{\textreft}[1]{Abschnitt~\ref{#1} (siehe Seite~\pageref{#1})}
-%
-% --------------------------------------------------
-% RESULT = (siehe Abb. 10.4)
-\newcommand{\fref}[1]{(siehe Abb.~\ref{#1})}
-%
-% RESULT = (siehe Abb. 10.4 b)
-\newcommand{\frefadd}[2]{(siehe Abb.~\ref{#1}~#2)}
-%
-% RESULT = (siehe Abb. 10.4, Seite 12)
-\newcommand{\figref}[1]{(siehe Abb.~\ref{#1}, Seite~\pageref{#1})}
-%
-% RESULT = (siehe Abb. 10.4 b, Seite 12)
-\newcommand{\figrefadd}[2]{(siehe Abb.~\ref{#1}~#2, Seite~\pageref{#1})}
-%
-% RESULT = Abbildung 10.4
-\newcommand{\figreft}[1]{Abbildung~\ref{#1}}
-%
-% RESULT = Abbildung 10.4 b
-\newcommand{\figrefaddt}[2]{Abbildung~\ref{#1}~#2}
-%
-% --------------------------------------------------
-% RESULT = (siehe Seite 12)
-\newcommand{\seepage}[1]{(siehe Seite~\pageref{#1})}
 
+% % ref commands, e.g. for images, tables and text labels
+% % --------------------------------------------------
+% % RESULT = (siehe Tab. 12.4)
+% \newcommand{\tabref}[1]{(see Table ~\ref{#1})}
+% %
+% % RESULT = (siehe Tab. 12.4)
+% \newcommand{\tableref}[1]{(see Table ~\ref{#1} Seite~\pageref{#1})}
+% %
+% % --------------------------------------------------
+% % RESULT = (siehe 3.4)
+% \newcommand{\tref}[1]{(siehe \ref{#1})}
+% %
+% % RESULT = Abschnitt 3.4
+% \newcommand{\treft}[1]{Abschnitt~\ref{#1}}
+% %
+% % RESULT = (siehe 3.4, Seite 12)
+% \newcommand{\textref}[1]{(siehe \ref{#1}, Seite~\pageref{#1})}
+% %
+% % RESULT = Abschnitt 3.4 (siehe Seite 12)
+% \newcommand{\textreft}[1]{Abschnitt~\ref{#1} (siehe Seite~\pageref{#1})}
+% %
+% % --------------------------------------------------
+% % RESULT = (siehe Abb. 10.4)
+% \newcommand{\fref}[1]{(siehe Abb.~\ref{#1})}
+% %
+% % RESULT = (siehe Abb. 10.4 b)
+% \newcommand{\frefadd}[2]{(siehe Abb.~\ref{#1}~#2)}
+% %
+% % RESULT = (siehe Abb. 10.4, Seite 12)
+% \newcommand{\figref}[1]{(siehe Abb.~\ref{#1}, Seite~\pageref{#1})}
+% %
+% % RESULT = (siehe Abb. 10.4 b, Seite 12)
+% \newcommand{\figrefadd}[2]{(siehe Abb.~\ref{#1}~#2, Seite~\pageref{#1})}
+% %
+% % RESULT = Abbildung 10.4
+% \newcommand{\figreft}[1]{Abbildung~\ref{#1}}
+% %
+% % RESULT = Abbildung 10.4 b
+% \newcommand{\figrefaddt}[2]{Abbildung~\ref{#1}~#2}
+% %
+% % --------------------------------------------------
+% % RESULT = (siehe Seite 12)
+% \newcommand{\seepage}[1]{(siehe Seite~\pageref{#1})}
+%
 
 % **************************************************
 % Sectioning Commands
@@ -492,16 +491,15 @@
 \newcommand{\thesisparagraphfont}{\color{ctcolorparagraph}\tgherosfont\small\bfseries}
 %
 % headings
-\setkomafont{part}{\thesispartfont} % for chapter entries
-\setkomafont{chapter}{\thesischapterfont} % for chapter entries
-\setkomafont{section}{\thesissectionfont} % for section entries
+\setkomafont{part}{\thesispartfont} 			% for chapter entries
+\setkomafont{chapter}{\thesischapterfont} 		% for chapter entries
+\setkomafont{section}{\thesissectionfont} 		% for section entries
 \setkomafont{subsection}{\thesissubsectionfont} % for section entries
 \addtokomafont{subsubsection}{\tgherosfont}
 %\addtokomafont{paragraph}{\tgherosfont}
 \setkomafont{paragraph}{\thesisparagraphfont}
 
 %\setkomafont{subsection}{\large} % for subsection entries
-
 
 
 %
