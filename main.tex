@@ -13,7 +13,7 @@
 	openright,						% doublepage cleaning ends up right side
 	parskip=full,					% spacing value / method for paragraphs
 	chapterprefix=true,				% prefix for chapter marks
-	10pt,							% font size
+	11pt,							% font size
 	headings=normal,				% size of headings
 	bibliography=totoc,				% include bib in toc
 	listof=totoc,					% include listof entries in toc
@@ -34,7 +34,7 @@
 \newcommand{\thesisName}{Raphael Vallat}
 \newcommand{\thesisSubject}{Neuroscience}
 \newcommand{\thesisDate}{December 19, 2017}
-\newcommand{\thesisVersion}{1a}
+\newcommand{\thesisVersion}{Draft}
 
 \newcommand{\thesisUniversity}{\protect{Lyon 1 University}}
 \newcommand{\thesisUniversityDepartment}{Department of Biology}
@@ -101,6 +101,8 @@
 \input{content/garde}			% INCLUDE: Title page Lyon 1 University
 \cleardoublepage
 
+\input{content/art-grandville}
+
 \pagestyle{plain}				% display just page numbers
 \input{content/abstract}		% INCLUDE: the abstracts (english and french)
 \cleardoublepage
@@ -117,8 +119,6 @@
 
 \listoftables
 \cleardoublepage
-
-\input{content/art-grandville}
 
 % --------------------------
 % Body matter
