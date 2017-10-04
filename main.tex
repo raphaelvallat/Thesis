@@ -33,7 +33,7 @@
 \newcommand{\thesisTitle}{Content and frequency of dream reports. Psychological and neurophysiological correlates.}
 \newcommand{\thesisName}{Raphael Vallat}
 \newcommand{\thesisSubject}{Neuroscience}
-\newcommand{\thesisDate}{December 19, 2017}
+\newcommand{\thesisDate}{December 8, 2017}
 \newcommand{\thesisVersion}{Draft}
 
 \newcommand{\thesisUniversity}{\protect{Lyon 1 University}}
@@ -99,12 +99,17 @@
 % --------------------------
 \pagenumbering{roman}			% roman page numbing (invisible for empty page style)
 \pagestyle{empty}				% no header or footers
-\input{content/front-garde}		% INCLUDE: Title page Lyon 1 University
+
+\input{content/front-garde-fr}	% Page de garde français + composante
+\cleardoublepage
+
+\input{content/front-garde-en}	% Title page english
 \cleardoublepage
 
 \input{content/front-grandville}
 
 \pagestyle{plain}						% display just page numbers
+
 \input{content/front-abstract}			% INCLUDE: the abstracts (english and french)
 \cleardoublepage
 
@@ -112,6 +117,9 @@
 \cleardoublepage
 
 \input{content/front-acronyms} 			% INCLUDE: acronyms
+\cleardoublepage
+
+\input{content/front-cv} 				% INCLUDE: short CV
 \cleardoublepage
 
 \input{content/front-publications} 		% INCLUDE: publications
