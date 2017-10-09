@@ -252,6 +252,10 @@
 		\captionsetup{format=llap,labelsep=quad,singlelinecheck=false}%
 %	}{}
 \fi
+
+\captionsetup[table]{font={stretch=1.1}}    
+\captionsetup[figure]{font={stretch=1.1}}
+
 %
 \RequirePackage[					% page layout modifications
 	paper=a4paper,					% 	- use A4 paper size
@@ -261,7 +265,7 @@
 	includefoot,					% 	- include footer space
 	includemp,						% 	- include side note space
 	bindingoffset=0.5cm,			% 	- binding correction
-	top=1.5cm,						% 	- total body: top margin
+	top=2cm,						% 	- total body: top margin
 	left=3.5cm,						% 	- total body: left margin (odd pages)
 	right=0.5cm,					% 	- total body: right margin (odd pages)
 	bottom=1.5cm,					% 	- total body: bottom margin
@@ -310,6 +314,7 @@
 % **************************************************
 % List Definitions
 % **************************************************
+
 \newenvironment{my_list}%
 	{\begin{enumerate}%
 		\setlength{\itemsep}{1pt}%
@@ -333,6 +338,8 @@
 	\newenvironment{ct_version_list_sub}
 		{\begin{itemize}[topsep=-0pt,partopsep=0pt,parsep=0pt,itemsep=0pt]}
 		{\end{itemize}}%
+
+\renewcommand{\textrightarrow}{$\rightarrow$}
 
 \renewcommand{\descriptionlabel}[1]{%
 	\hspace*{\labelsep}%

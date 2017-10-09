@@ -23,22 +23,20 @@ Traditionally, fMRI has been used to produce maps of task-dependent brain functi
 
 More recently, there has been a growing interest in the application of resting-state fMRI (RS-fMRI). Indeed, soon after the development of fMRI, Biswal and colleagues observed that the resting brain is not silent but contains information about its functional organization \citep{biswal_functional_1995}. Specifically, they reported that, during rest, time courses of low frequency fluctuations (<0.1 Hz) in somatomotor brain areas, showed a high degree of temporal correlation. They argued that this correlation, which may arise from fluctuations in blood oxygenation or flow, is a manifestation of functional connectivity of the brain. Although at the time Biswal’s seminal observation was mostly disregarded, it laid the basis for the now widely-used resting-state fMRI paradigm, which measures how different regions of the brain communicate while participants are not performing any active task. Although both resting-state and task-related designs measures BOLD signal, there are several major differences between the two, which are reported in Table \ref{tab:method:fMRI-paradigm}.
 
-\begin{table}[]
-\centering
-\caption[Key differences between task-based fMRI and resting-state fMRI]{Key differences between task-based fMRI and resting-state fMRI. Modified from \citet{smitha_resting_2017}}
-\label{tab:method:fMRI-paradigm}
-\resizebox{\textwidth}{!}{%
-\begin{tabularx}{\textwidth}{XXX}
-\toprule
-                      & Task-based fMRI                                                                                                                                          & Resting-state fMRI                                                                                                               \\ \midrule
-Design                & Analyses of the relative changes from baseline in the BOLD signal during a task or in response to a stimulus & Analyses of the spontaneous BOLD signal in the absence of any explicit task or input \\
-Energy consumption    & Task-specific increase in neuronal metabolism are less than 5\%                                             & 60–80\% of brain’s energy is consumed during resting state                                                                       \\
-Brain areas           & The focus is only on a very small fraction of the brain’s overall activity                                   & The focus is on large-scale brain networks                                                                                       \\
-Signal-to-noise ratio & Low since 80\% of the BOLD modulation is discarded as noise                                            & Good since it takes the overall spontaneous low frequency fluctuations               \\
-Patient cooperation   & Patient cooperation is essential                                                                                                                         & Pediatric, psychiatric and even comatose patients can do\\   RS-fMRI                     \\
-Duration              & Requires a large number of repetitions                                                                                                                   & Usually 6 to 10 minutes                                                                                                          \\ \bottomrule
-\end{tabularx}%
-}
+\begin{table}[htb]
+    \centering
+    \caption[Key differences between task-based fMRI and resting-state fMRI]{Key differences between task-based fMRI and resting-state fMRI. Modified from \citet{smitha_resting_2017}}
+    \label{tab:method:fMRI-paradigm}
+    \begin{tabularx}{\textwidth}{XXX}
+    \toprule
+                          & Task-based fMRI                                                                                                 & Resting-state fMRI                                                                   \\ \midrule
+    Design                & Analyses of the relative changes from baseline in the BOLD signal during a task or in response to a stimulus    & Analyses of the spontaneous BOLD signal in the absence of any explicit task or input \\
+    Energy consumption    & Task-specific increase in neuronal metabolism are less than 5\%                                                 & 60–80\% of brain’s energy is consumed during resting state                           \\
+    Brain areas           & The focus is only on a very small fraction of the brain’s overall activity                                      & The focus is on large-scale brain networks                                           \\
+    Signal-to-noise ratio & Low since 80\% of the BOLD modulation is discarded as noise                                                     & Good since it takes the overall spontaneous low frequency fluctuations               \\
+    Patient cooperation   & Patient cooperation is essential                                                                                & Pediatric, psychiatric and even comatose patients can do\\   RS-fMRI                 \\
+    Duration              & Requires a large number of repetitions                                                                          & Usually 6 to 10 minutes                                                              \\ \bottomrule
+    \end{tabularx}%
 \end{table}
 
 \section{Functional connectivity}
