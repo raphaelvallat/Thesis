@@ -32,8 +32,8 @@
   \rule{\textwidth}{0.5pt}
 
   \fontsize{16pt}{20pt}\selectfont
-  FRÉQUENCE ET CONTENU DU RAPPORT DE RÊVE:\\ \medskip
-  Approches Comportementales et Neurophysiologiques.
+  \textbf{FRÉQUENCE ET CONTENU DU RAPPORT DE RÊVE:\\ \medskip
+  Approches Comportementales et Neurophysiologiques.}
   \rule{\textwidth}{0.5pt}
 
   \end{center}
@@ -41,12 +41,16 @@
   \fontsize{12pt}{14pt}\selectfont
   \textbf{Devant le jury composé de:}
 
-  Pr. Sophie Schwartz  	\hfill Rapporteure\\
-  Pr. Michael Schredl 	\hfill Rapporteur\\
-  Pr. Yves Rossetti 	\hfill Examinateur\\
-  Dr. Perrine Ruby 		\hfill Directrice de thèse\\
+  \newcommand\textline[4][t]{%
+      \par\noindent\parbox[#1]{.333\textwidth}{\raggedright#2}%
+      \parbox[#1]{.333\textwidth}{\centering#3}%
+      \parbox[#1]{.333\textwidth}{\raggedleft#4}\par
+  }
 
-  \vfill
+  \textline[t]{Pr. Sophie SCHARTZ}{Université de Genève}{Rapporteure}
+  \textline[t]{Pr. Michael SCHREDL}{CIMH}{Rapporteur}
+  \textline[t]{Pr. Yves ROSSETTI}{Université de Lyon}{Examinateur}
+  \textline[t]{Pr. Perrine RUBY }{Université de Lyon}{Directrice de thèse}
 
 \end{titlepage}
 
