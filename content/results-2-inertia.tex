@@ -102,10 +102,10 @@ Despise the sleep deprivation, 20 out of 55 participants did not reach or mainta
     \caption*{\textbf{Table 1. Sleep parameters (Mean ± SD) of the subjects in the N3 (n=20) and N2 (n=14) groups.} TST = Total Sleep Time, SE = Sleep Efficiency, Wake (W), N1, N2 and N3 = Total duration of each sleep stage in minutes. LAS1 = latency (min) between the awakening and the start of the first post-awakening resting-state scan. LAS2 = latency (min) between the awakening and the start of the second post-awakening resting-state scan.}
     \begin{tabularx}{\textwidth}{XXXXXXXXX}
     \toprule
-    Group  & TST        & SE (\%)       & W         & N1         & N2         & N3          & LAS1      & LAS2 \\ \midrule
-    N2     & 38.2 ± 7.1 & 87.4 ± 9.6    & 9.1 ± 4.0 & 14.2 ± 7.6 & 21.6 ± 6.2 & 2.9 ± 4.4   & 3.7 ± 1.9 & 23.8 ± 3.7 \\
-    N3     & 37.3 ± 5.0 & 87.5 ± 7.4    & 9.2 ± 4.2 & 9.0 ± 5.7  & 17.7 ± 4.9 & 11.0 ± 4.6  & 4.8 ± 3.9 & 24.4 ± 4.2 \\
-    T-test & .68        & .99           & .95       & .03        & .05        & <.001       & .34       & .63 \\ \bottomrule
+    Group  & TST        & SE (\%)       & W         & N1         & N2         & N3          & LAS1      & LAS2 			\\ \midrule
+    N2     & 38.2 ± 7.1 & 87.4 ± 9.6    & 9.1 ± 4.0 & 14.2 ± 7.6 & 21.6 ± 6.2 & 2.9 ± 4.4   & 3.7 ± 1.9 & 23.8 ± 3.7 	\\
+    N3     & 37.3 ± 5.0 & 87.5 ± 7.4    & 9.2 ± 4.2 & 9.0 ± 5.7  & 17.7 ± 4.9 & 11.0 ± 4.6  & 4.8 ± 3.9 & 24.4 ± 4.2 	\\
+    T-test & .68        & .99           & .95       & .03        & .05        & <.001       & .34       & .63 			\\ \bottomrule
     \end{tabularx}%
 \end{table}
 
@@ -180,65 +180,71 @@ R.V and P.R designed the study, acquired the data and wrote the paper. D.M helpe
 
 \subsection*{Supplementary materials}
 \label{res:inertia:inertia:supp}
+\vspace*{1cm}
 
-\begin{figure}[htb]
+\begin{figure}[!htbp]
 	\includegraphics[width=\textwidth]{Fig/Results/Inertia/Inertia/S1_Scoring.png}
 	\caption*{\textbf{S1 Fig. Hypnogram and EEG data (Cz) acquired during the nap slot in one subject.} Top. 15-seconds frames of wakefulness, N2 and N3 sleep. Middle. Hypnogram showing vigilance states as function of time during the nap slot. Bottom. Spectrogram showing the normalized power in the 0.5 – 20 Hz range for each 15-seconds frames (lighter colors indicate higher power).}
 \end{figure}
 
-\begin{figure}[htb]
+\begin{figure}[!htbp]
 	\includegraphics[width=\textwidth]{Fig/Results/Inertia/Inertia/S2_Networks.png}
 	\caption*{\textbf{S2 Fig. Networks and regions included in the connectivity analysis.} Abbreviations: PCC/PC, Posterior Cingulate Cortex / Precuneous – MPFC, Medial Prefrontal Cortex – LP, Lateral Parietal – FEF, Frontal Eye Fields – IPS, Intraparietal Sulcus – PPC, Posterior Parietal Cortex – LPFC, Lateral Prefrontal Cortex – ACC, Anterior Cingulate Cortex – RPFC, Rostral Prefrontal Cortex – SMG, Supra-Marginal Gyrus. Note that the salience network also includes the anterior insula (not visible).}
 \end{figure}
 
+\FloatBarrier
+
+% Table column width
+\newcolumntype{b}{>{\hsize=0.2\textwidth}X}
+
 \begin{table}[htb]
-    \caption*{\textbf{S1 Table. Seed-based functional connectivity results for the N3 group (n=20)}. Seed region is the posterior cingulate cortex (PCC, center of mass in MNI coordinates = 1, -61, 38). Statistical analyses were performed using a cluster-defining voxel-wise height threshold of p<.01 (uncorrected, two-sided) and a whole-brain family-wise error (FWE) corrected extent threshold of p<.05 to show brain areas either positively or negatively correlated with the seed region. SMG, supramarginal gyrus – ITG, inferior temporal gyrus – SPL, superior parietal lobule – SFG, superior frontal gyrus.}
+    \caption*{\textbf{S1 Table. Seed-based functional connectivity results for the N3 group (n=20)}. Seed region is the posterior cingulate cortex (PCC, center of mass in MNI coordinates = 1, -61, 38). Statistical analyses were performed using a cluster-defining voxel-wise height threshold of p<.01 (uncorrected, two-sided) and a whole-brain family-wise error (FWE) corrected extent threshold of p<.05 to show brain areas either positively or negatively correlated with the seed region. PG, precentral gyrus - SMG, supramarginal gyrus – ITG, inferior temporal gyrus – SPL, superior parietal lobule – SFG, superior frontal gyrus – N.S, not significant.}
     \resizebox{\textwidth}{!}{%
-    \begin{tabularx}{\textwidth}{XXXllllX}
+    \begin{tabularx}{\textwidth}{lXXllllX}
     \toprule
-             &              &                    & \multicolumn{3}{c}{MNI coordinates} 	&         	   &              \\
-    Contrast                & Brain region       & Brodmann area & X   & Y   & Z   		& T value 	   & Cluster size \\ \midrule
-    Pre-sleep > 5 min       & Precentral gyrus L & BA44          & -42 & 4   & 26  		& -6.45        & 2980         \\
-                            & Precentral gyrus R & BA6           & 22  & -14 & 58  		& -6.36        & 1462         \\
-                            & SMG L              & BA40          & -34 & -44 & 34  		& -5.05        & 922          \\
-                            & ITG L              & BA20          & -48 & -6  & -36 		& 6.89         & 742          \\
-                            & SPL R              & BA2           & 40  & -38 & 52  		& -5.10        & 390          \\
-                            & Precentral gyrus R & BA4           & 8   & -26 & 60  		& -4.14        & 295          \\
-                            & SFG R              & BA6           & 10  & 4   & 66  		& -5.51        & 277          \\
-    Pre-sleep > 25 min      & No sig. difference & -             & -   & -   & -   		& -            & -            \\
-    25 min > 5 min          & Precentral gyrus L & BA44          & -42 & 4   & 24  		& -6.68        & 1595         \\
-                            & SMG L              & BA40          & -52 & -46 & 44  		& -5.56        & 879          \\ \bottomrule
+             &              &                    	& \multicolumn{3}{c}{MNI coordinates} 	&         	   &              \\
+    Contrast                & Region       			& Brodmann area & X   & Y   & Z   		& T value 	   & Cluster size \\ \midrule
+    Pre-sleep > 5 min       & PG L 					& BA44          & -42 & 4   & 26  		& -6.45        & 2980         \\
+                            & PG R 					& BA6           & 22  & -14 & 58  		& -6.36        & 1462         \\
+                            & SMG L              	& BA40          & -34 & -44 & 34  		& -5.05        & 922          \\
+                            & ITG L              	& BA20          & -48 & -6  & -36 		& 6.89         & 742          \\
+                            & SPL R              	& BA2           & 40  & -38 & 52  		& -5.10        & 390          \\
+                            & PG R 					& BA4           & 8   & -26 & 60  		& -4.14        & 295          \\
+                            & SFG R              	& BA6           & 10  & 4   & 66  		& -5.51        & 277          \\
+    Pre-sleep > 25 min      & N.S 					& -             & -   & -   & -   		& -            & -            \\
+    25 min > 5 min          & PG L 					& BA44          & -42 & 4   & 24  		& -6.68        & 1595         \\
+                            & SMG L              	& BA40          & -52 & -46 & 44  		& -5.56        & 879          \\ \bottomrule
     \end{tabularx}%
     }
 \end{table}
 
-\begin{table}[htb]
-    \caption*{\textbf{S2 Table. Seed-based functional connectivity results for the N2 group (n=14).} Seed region is the posterior cingulate cortex (PCC, center of mass in MNI coordinates = 1, -61, 38). Statistical analyses were performed using a cluster-defining voxel-wise height threshold of p<.01 (uncorrected, two-sided) and a whole-brain family-wise error (FWE) corrected extent threshold of p<.05. DLPFC, dorsolateral prefrontal cortex – Parahippo. gyrus, parahippocampal gyrus – SFG, superior frontal gyrus.}
-    \begin{tabularx}{\textwidth}{XXXllllX}
+\begin{table}[htbp]
+    \caption*{\textbf{S2 Table. Seed-based functional connectivity results for the N2 group (n=14).} Seed region is the posterior cingulate cortex (PCC, center of mass in MNI coordinates = 1, -61, 38). Statistical analyses were performed using a cluster-defining voxel-wise height threshold of p<.01 (uncorrected, two-sided) and a whole-brain family-wise error (FWE) corrected extent threshold of p<.05. DLPFC, dorsolateral prefrontal cortex – PHG, parahippocampal gyrus – SFG, superior frontal gyrus - N.S, not significant.}
+    \begin{tabularx}{\textwidth}{lXXllllX}
     \toprule
     &                       &                       & \multicolumn{3}{c}{MNI coordinates}                &              &               \\
-    Contrast                & Brain region          & Brodmann area & X          & Y         & Z         & T value 		& Cluster size  \\ \midrule
+    Contrast                & Region          		& Brodmann area & X          & Y         & Z         & T value 		& Cluster size  \\ \midrule
     Pre-sleep > 5 min       & DLPFC R               & BA9/46        & 28         & 40        & 32        & -5.89        & 464           \\
                             & SFG L                 & BA6           & -22        & -2        & 68        & -6.10        & 351           \\
                             & SFG R                 & BA6           & 26         & 2         & 72        & -6.20        & 271           \\
-                            & Parahippo. gyrus R    & BA34          & 22         & -30       & -12       & -8.40        & 258           \\
+                            & PHG. R    			& BA34          & 22         & -30       & -12       & -8.40        & 258           \\
                             & DLPFC R               & BA9/46        & -38        & 42        & 40        & -7.01        & 254           \\
-    Pre-sleep > 25 min      & No sig. difference    & -             & -          & -         & -         & -            & -             \\
-    25 min > 5 min          & No sig. difference    & -             & -          & -         & -         & -            & -             \\ \bottomrule
+    Pre-sleep > 25 min      & N.S    				& -             & -          & -         & -         & -            & -             \\
+    25 min > 5 min          & N.S    				& -             & -          & -         & -         & -            & -             \\ \bottomrule
     \end{tabularx}%
 \end{table}
 
-\begin{table}[htb]
-    \caption*{\textbf{S3 Table. Seed-based functional connectivity results for the group comparison (N3 (n=20) minus N2 (n=14)).} Seed-based functional connectivity results for the group comparison (N3 (n=20) minus N2 (n=14)). Seed region is the posterior cingulate cortex (PCC, center of mass in MNI coordinates = 1, -61, 38). Statistical analyses were performed using a cluster-defining voxel-wise height threshold of p<.01 (uncorrected, two-sided) and a whole-brain family-wise error (FWE) corrected extent threshold of p<.05 to show brain areas either positively or negatively correlated with the seed region. IFG, inferior frontal gyrus – SMG, supramarginal gyrus.}
-    \begin{tabularx}{\textwidth}{XXXllllX}
+\begin{table}[htbp]
+    \caption*{\textbf{S3 Table. Seed-based functional connectivity results for the group comparison (N3 (n=20) minus N2 (n=14)).} Seed-based functional connectivity results for the group comparison (N3 (n=20) minus N2 (n=14)). Seed region is the posterior cingulate cortex (PCC, center of mass in MNI coordinates = 1, -61, 38). Statistical analyses were performed using a cluster-defining voxel-wise height threshold of p<.01 (uncorrected, two-sided) and a whole-brain family-wise error (FWE) corrected extent threshold of p<.05 to show brain areas either positively or negatively correlated with the seed region. PG, precentral gyrus - IFG, inferior frontal gyrus – SMG, supramarginal gyrus - N.S, not significant.}
+    \begin{tabularx}{\textwidth}{lXXllllX}
     \toprule
-    &         &                    & \multicolumn{3}{c}{MNI coordinates}                 &              &              \\
-    Scan      & Brain region       & Brodmann area & X          & Y          & Z         & T value 		& Cluster size \\ \midrule
-    Pre-sleep & No sig. difference & -             & -          & -          & -         & -            & -            \\
-    5 min     & Precentral gyrus R & BA44          & 46         & 8          & 26        & 4.63         & 595          \\
-              & IFG L              & BA45          & -48        & 32         & 6         & 5.08         & 314          \\
-              & Precentral gyrus L & BA4           & -42        & -10        & 36        & 4.90         & 264          \\
-              & SMG R              & BA40          & 68         & -32        & 26        & 4.46         & 253          \\
-    25 min    & No sig. difference & -             & -          & -          & -         & -            & -            \\ \toprule
+    &         &                 & \multicolumn{3}{c}{MNI coordinates}                 &              &              \\
+    Scan      & Region    		& Brodmann area & X          & Y          & Z         & T value 		& Cluster size \\ \midrule
+    Pre-sleep & N.S 			& -             & -          & -          & -         & -            & -            \\
+    5 min     & PG R 			& BA44          & 46         & 8          & 26        & 4.63         & 595          \\
+              & IFG L           & BA45          & -48        & 32         & 6         & 5.08         & 314          \\
+              & PG L 			& BA4           & -42        & -10        & 36        & 4.90         & 264          \\
+              & SMG R           & BA40          & 68         & -32        & 26        & 4.46         & 253          \\
+    25 min    & N.S & -         & -          & -          & -         & -            & -            \\ \toprule
     \end{tabularx}%
 \end{table}
