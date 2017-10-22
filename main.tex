@@ -132,26 +132,26 @@
 % \input{content/front-publications} 		% INCLUDE: publications
 % \cleardoublepage
 %
-% \makeatletter
-% \let\@cftmaketoctitle\relax
-% \let\@cftmakeloftitle\relax
-% \let\@cftmakelottitle\relax
-% \makeatother
-%
-% % Table of contents
-% \setcounter{tocdepth}{1}		% define depth of toc
-% \addchap{Table of contents}
-% \vspace*{-10mm}
-% \tableofcontents
-% \cleardoublepage
-%
-% % List of figures
-% \addchap{List of figures}
-% \vspace*{-10mm}
-% \listoffigures
-% \cleardoublepage
-%
-% % List of tables
+\makeatletter
+\let\@cftmaketoctitle\relax
+\let\@cftmakeloftitle\relax
+\let\@cftmakelottitle\relax
+\makeatother
+
+% Table of contents
+\setcounter{tocdepth}{1}		% define depth of toc
+\addchap{Table of contents}
+\vspace*{-10mm}
+\tableofcontents
+\cleardoublepage
+
+% List of figures
+\addchap{List of figures}
+\vspace*{-10mm}
+\listoffigures
+\cleardoublepage
+
+% List of tables
 % \addchap{List of tables}
 % \vspace*{-10mm}
 % \listoftables
@@ -165,29 +165,30 @@
 \pagestyle{maincontentstyle} 				% fancy header and footer
 
 % \part{GENERAL INTRODUCTION}
-% \input{content/intro-1-dream-research}
-% \input{content/intro-2-dream-recall}
-% \input{content/intro-3-dream-content}
-% \input{content/intro-4-dream-function}
+\input{content/intro-1-dream-research}
+\input{content/intro-2-dream-recall}
+\input{content/intro-3-dream-content}
+\input{content/intro-4-dream-function}
 \input{content/intro-5-problematic}
-%
-% \part{METHODS}
-% \input{content/method-1-eeg}
-% \input{content/method-2-fMRI}
-%
-% \cleardoublepage
-% \part{EXPERIMENTAL RESULTS}
-% \input{content/results-1-arousal}
-% \input{content/results-2-inertia}
-% \input{content/results-3-survey}
-% \input{content/results-4-wle}
-% \input{content/results-5-software}
-%
-% \cleardoublepage
-% \part{GENERAL DISCUSSION}
-% \input{content/discussion}
-%
-% \cleardoublepage
+
+\part{METHODS}
+\input{content/method-1-eeg}
+\input{content/method-2-fMRI}
+
+\cleardoublepage
+\part{EXPERIMENTAL RESULTS}
+\input{content/results-1-arousal}
+\input{content/results-2-inertia}
+\input{content/results-3-dmn-crea}
+\input{content/results-4-survey}
+\input{content/results-5-wle}
+\input{content/results-6-software}
+
+\cleardoublepage
+\part{GENERAL DISCUSSION}
+\input{content/discussion}
+
+\cleardoublepage
 
 % --------------------------
 % Back matter
