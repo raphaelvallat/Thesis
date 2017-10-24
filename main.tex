@@ -33,6 +33,7 @@
 \newcommand{\thesisTitle}{Content and frequency of dream reports. Psychological and neurophysiological correlates.}
 \newcommand{\thesisName}{Raphael Vallat}
 \newcommand{\thesisSubject}{Neuroscience}
+\newcommand{\thesisKeywords}{Dream, sleep, awakening, memory, magnetic resonance imaging, electroencephalography, brain networks, software development}
 \newcommand{\thesisDate}{December 8, 2017}
 \newcommand{\thesisVersion}{Draft}
 
@@ -43,9 +44,6 @@
 \newcommand{\thesisUniversityCity}{Lyon}
 \newcommand{\thesisUniversityStreetAddress}{43 Boulevard du 11 Novembre 1918}
 \newcommand{\thesisUniversityPostalCode}{69100 Villeurbanne}
-
-\newcommand{\q}[1]{\textit{``#1''}} 	% Quote
-\newcommand\fnurl[2]{\href{#2}{#1}\footnote{\url{#2}}} % Footnotes hyperlink
 
 % **************************************************
 % Load and Configure Packages
@@ -79,6 +77,7 @@
 	pdftitle={\thesisTitle},			% 	- title (PDF meta)
 	pdfsubject={\thesisSubject},		% 	- subject (PDF meta)
 	pdfauthor={\thesisName},			% 	- author (PDF meta)
+	pdfkeywords={\thesisKeywords},		% 	- keywords (PDF meta)
 	plainpages=false,					% 	-
 	colorlinks=false,					% 	- colorize links?
 	pdfborder={0 0 0},					% 	-
@@ -189,7 +188,7 @@
 %
 % \cleardoublepage
 % \part{GENERAL DISCUSSION}
-% \input{content/discussion}
+\input{content/discussion}
 
 % \cleardoublepage
 
