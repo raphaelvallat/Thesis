@@ -165,38 +165,38 @@
 \pagenumbering{arabic}						% Arabic page numbering
 \setcounter{page}{1}						% set page counter
 \pagestyle{maincontentstyle} 				% fancy header and footer
-
+%
 \part{GENERAL INTRODUCTION}
 \input{content/intro-1-dream-research}
-% \input{content/intro-2-dream-recall}
-% \input{content/intro-3-dream-content}
-% \input{content/intro-4-dream-function}
-% \input{content/intro-5-problematic}
+\input{content/intro-2-dream-recall}
+\input{content/intro-3-dream-content}
+\input{content/intro-4-dream-function}
+\input{content/intro-5-problematic}
 %
-% \part{METHODS}
-% \input{content/method-1-eeg}
-% \input{content/method-2-fMRI}
+\part{METHODS}
+\input{content/method-1-eeg}
+\input{content/method-2-fMRI}
 %
-% \cleardoublepage
-% \part{EXPERIMENTAL RESULTS}
-% \input{content/results-1-arousal}
-% \input{content/results-2-inertia}
-% \input{content/results-3-dmn-crea}
-% \input{content/results-4-survey}
-% \input{content/results-5-wle}
-% \input{content/results-6-software}
+\cleardoublepage
+\part{EXPERIMENTAL RESULTS}
+\input{content/results-1-arousal}
+\input{content/results-2-inertia}
+\input{content/results-3-dmn-crea}
+\input{content/results-4-survey}
+\input{content/results-5-wle}
+\input{content/results-6-software}
 %
-% \cleardoublepage
-% \part{GENERAL DISCUSSION}
-% \input{content/discussion}
+\cleardoublepage
+\part{GENERAL DISCUSSION}
+\input{content/discussion}
 %
-% \cleardoublepage
-
+\cleardoublepage
+%
 % --------------------------
 % Back matter
 % --------------------------
 \part{REFERENCES} \cleardoublepage
-
+%
 % Notes + translation
 \DeclareInstance{enotez-list}{custom}{paragraph}
 {
@@ -206,7 +206,7 @@ format    = \normalfont,
 number    = \textsuperscript{#1}
 }
 \printendnotes[custom] \cleardoublepage
-
+%
 % Bibliography
 \chapter{Bibliography}
 {
@@ -216,10 +216,10 @@ number    = \textsuperscript{#1}
 \setlength{\bibitemsep}{0.5\baselineskip plus 0.5\baselineskip}
 \printbibliography[nottype=online, heading=none]
 }
-
+%
 \cleardoublepage
 \input{content/back-colophon}
-
+%
 % **************************************************
 % End of Document CONTENT
 % **************************************************
