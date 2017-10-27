@@ -239,11 +239,16 @@
 \RequirePackage{hyperref} 			% interactive link inside the document
 
 %
+\definecolor{light-gray}{gray}{.95}
+
 \RequirePackage[								% modify figure and table captions
 	font={small}, 								% 	- small font size
 	labelfont={bf,sf,color=ctcolorfloatlabel},	% 	- label in bold, sans-serif and magenta
 	labelsep=\cthesis@figuresep,				% 	- separator: none, colon, period, space, quad, newline, endash
-	singlelinecheck=false						% 	- no centered single-lined captions
+	singlelinecheck=false,						% 	- no centered single-lined captions
+	box=colorbox,
+	boxcolor=light-gray,
+	slc=off
 ]{caption}[2008/08/24]
 %\ifthenelse{\boolean{@figurecaptionoutside}}%
 \ifct@cthesis@hangfigurecaption
@@ -253,8 +258,9 @@
 %	}{}
 \fi
 
-\captionsetup[table]{font={stretch=1}}
-\captionsetup[figure]{font={stretch=1}}
+% To increase the size of figure and table caption
+% \captionsetup[table]{font={stretch=1}}
+% \captionsetup[figure]{font={stretch=1}}
 
 %
 \RequirePackage[					% page layout modifications
@@ -342,6 +348,13 @@
 		{\end{itemize}}%
 
 \renewcommand{\textrightarrow}{$\rightarrow$}
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
 
 \renewcommand{\descriptionlabel}[1]{%
 	\hspace*{\labelsep}%
