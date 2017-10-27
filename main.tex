@@ -49,16 +49,16 @@
 % Load and Configure Packages
 % **************************************************
 \usepackage[utf8]{inputenc}
-\usepackage{booktabs}
-\usepackage{tabularx}
-\usepackage{rotating}
-\usepackage{ltxtable}
-\usepackage{placeins}
-\usepackage[split=chapter]{enotez}
+\usepackage{booktabs}				% Better looking table
+\usepackage{tabularx}				% Allow better control of column width in tables
+\usepackage{rotating}				% Allow landscape figures
+\usepackage{ltxtable}				% Allow multi-pages long table
+\usepackage{placeins}				% Allow command \FloatBarrier
+\usepackage[split=chapter]{enotez}	% Allow command \endnote{}
 \usepackage{multicol}
-\usepackage[english]{babel} 	% babel system, adjust the language of the content
+\usepackage[english]{babel} 		% babel system, adjust the language of the content
 \usepackage{pdfpages}
-\usepackage[					% clean thesis style
+\usepackage[						% clean thesis style
 	figuresep=colon,
 	sansserif=false,
 	hangfigurecaption=true,
@@ -85,7 +85,7 @@
 	bookmarksnumbered=true,				%
 	bookmarksopen=true					%
 }
-
+% Font serif (default monospace) for \url{}
 \urlstyle{same}
 
 % Increase padding within table
@@ -117,21 +117,22 @@
 
 \pagestyle{plain}							% display just page numbers
 
-\input{content/front-abstract}			% INCLUDE: the abstracts (english and french)
+\input{content/front-abstract}				% INCLUDE: the abstracts (english and french)
 \cleardoublepage
 
-\input{content/front-acknowledgement} 	% INCLUDE: acknowledgement
+\input{content/front-acknowledgement} 		% INCLUDE: acknowledgement
 \cleardoublepage
 
-\input{content/front-acronyms} 			% INCLUDE: acronyms
+\input{content/front-acronyms} 				% INCLUDE: acronyms
 \cleardoublepage
 
-\input{content/front-cv} 				% INCLUDE: short CV
+\input{content/front-cv} 					% INCLUDE: short CV
 \cleardoublepage
 
-\input{content/front-publications} 		% INCLUDE: publications
+\input{content/front-publications} 			% INCLUDE: publications
 \cleardoublepage
 
+% Remove titles from TOC / LOF / LOT
 \makeatletter
 \let\@cftmaketoctitle\relax
 \let\@cftmakeloftitle\relax
@@ -167,30 +168,30 @@
 \pagestyle{maincontentstyle} 				% fancy header and footer
 %
 \part{GENERAL INTRODUCTION}
-% \input{content/intro-1-dream-research}
-% \input{content/intro-2-dream-recall}
-% \input{content/intro-3-dream-content}
-% \input{content/intro-4-dream-function}
-% \input{content/intro-5-problematic}
-% %
-% \part{METHODS}
-% \input{content/method-1-eeg}
-% \input{content/method-2-fMRI}
-% %
-% \cleardoublepage
-% \part{EXPERIMENTAL RESULTS}
-% \input{content/results-1-arousal}
-% \input{content/results-2-inertia}
-% \input{content/results-3-dmn-crea}
-% \input{content/results-4-survey}
-% \input{content/results-5-wle}
-% \input{content/results-6-software}
-% %
-% \cleardoublepage
-% \part{GENERAL DISCUSSION}
-% \input{content/discussion}
-% %
-% \cleardoublepage
+\input{content/intro-1-dream-research}
+\input{content/intro-2-dream-recall}
+\input{content/intro-3-dream-content}
+\input{content/intro-4-dream-function}
+\input{content/intro-5-problematic}
+%
+\part{METHODS}
+\input{content/method-1-eeg}
+\input{content/method-2-fMRI}
+%
+\cleardoublepage
+\part{EXPERIMENTAL RESULTS}
+\input{content/results-1-arousal}
+\input{content/results-2-inertia}
+\input{content/results-3-dmn-crea}
+\input{content/results-4-survey}
+\input{content/results-5-wle}
+\input{content/results-6-software}
+%
+\cleardoublepage
+\part{GENERAL DISCUSSION}
+\input{content/discussion}
+%
+\cleardoublepage
 %
 % --------------------------
 % Back matter
