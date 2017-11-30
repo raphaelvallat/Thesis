@@ -1,8 +1,0 @@
-Introduction = 10 minutes
-Inertia = ~17 minutes
-Arousals = ~7 minutes
-WLE = ~7 minutes
-Software = 5 minutes
-Conclusion = 5 minutes
-
-Total = 50 minutes
