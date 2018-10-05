@@ -8,17 +8,17 @@
 % Document Class Definition
 % **************************************************
 \documentclass[%
-	paper=A4,						% paper size
+	paper=A4,							% paper size
 	twoside=true,					% onesite or twoside printing
 	openright,						% doublepage cleaning ends up right side
 	parskip=full,					% spacing value / method for paragraphs
-	chapterprefix=true,				% prefix for chapter marks
-	11pt,							% font size
-	headings=normal,				% size of headings
-	bibliography=totoc,				% include bib in toc
+	chapterprefix=true,		% prefix for chapter marks
+	11pt,									% font size
+	headings=normal,			% size of headings
+	bibliography=totoc,		% include bib in toc
 	listof=totoc,					% include listof entries in toc
 	titlepage=on,					% own page for each title page
-	captions=tableabove,			% display table captions above the float env
+	captions=tableabove,	% display table captions above the float env
 	draft=false,					% value for draft version
 ]{scrreprt}%
 
@@ -49,16 +49,16 @@
 % Load and Configure Packages
 % **************************************************
 \usepackage[utf8]{inputenc}
-\usepackage{booktabs}				% Better looking table
-\usepackage{tabularx}				% Allow better control of column width in tables
-\usepackage{rotating}				% Allow landscape figures
-\usepackage{ltxtable}				% Allow multi-pages long table
-\usepackage{placeins}				% Allow command \FloatBarrier
+\usepackage{booktabs}							% Better looking table
+\usepackage{tabularx}							% Allow better control of column width in tables
+\usepackage{rotating}							% Allow landscape figures
+\usepackage{ltxtable}							% Allow multi-pages long table
+\usepackage{placeins}							% Allow command \FloatBarrier
 \usepackage[split=false]{enotez}	% Allow command \endnote{}
 \usepackage{multicol}
-\usepackage[english]{babel} 		% babel system, adjust the language of the content
+\usepackage[english]{babel} 			% babel system, adjust the language of the content
 \usepackage{pdfpages}
-\usepackage[						% clean thesis style
+\usepackage[											% clean thesis style
 	figuresep=colon,
 	sansserif=false,
 	hangfigurecaption=true,
@@ -74,16 +74,16 @@
 ]{cleanthesis}
 
 \hypersetup{							% setup the hyperref-package options
-	pdftitle={\thesisTitle},			% 	- title (PDF meta)
+	pdftitle={\thesisTitle},				% 	- title (PDF meta)
 	pdfsubject={\thesisSubject},		% 	- subject (PDF meta)
-	pdfauthor={\thesisName},			% 	- author (PDF meta)
-	pdfkeywords={\thesisKeywords},		% 	- keywords (PDF meta)
-	plainpages=false,					% 	-
-	colorlinks=false,					% 	- colorize links?
-	pdfborder={0 0 0},					% 	-
-	breaklinks=true,					% 	- allow line break inside links
-	bookmarksnumbered=true,				%
-	bookmarksopen=true					%
+	pdfauthor={\thesisName},				% 	- author (PDF meta)
+	pdfkeywords={\thesisKeywords},	% 	- keywords (PDF meta)
+	plainpages=false,								% 	-
+	colorlinks=false,								% 	- colorize links?
+	pdfborder={0 0 0},							% 	-
+	breaklinks=true,								% 	- allow line break inside links
+	bookmarksnumbered=true,					%
+	bookmarksopen=true							%
 }
 % Font serif (default monospace) for \url{}
 \urlstyle{same}
@@ -105,7 +105,7 @@
 % Front matter
 % --------------------------
 \pagenumbering{roman}						% roman page numbing (invisible for empty page style)
-\pagestyle{empty}							% no header or footers
+\pagestyle{empty}								% no header or footers
 
 % \input{content/front-garde-fr}				% Page de garde français + composante
 % \cleardoublepage
@@ -129,8 +129,8 @@
 \input{content/front-cv} 					% INCLUDE: short CV
 \cleardoublepage
 
-\input{content/front-publications} 			% INCLUDE: publications
-\cleardoublepage
+% \input{content/front-publications} 			% INCLUDE: publications
+% \cleardoublepage
 
 % Remove titles from TOC / LOF / LOT
 \makeatletter
@@ -164,8 +164,8 @@
 % Body matter
 % --------------------------
 \pagenumbering{arabic}						% Arabic page numbering
-\setcounter{page}{1}						% set page counter
-\pagestyle{maincontentstyle} 				% fancy header and footer
+\setcounter{page}{1}							% set page counter
+\pagestyle{maincontentstyle} 			% fancy header and footer
 %
 \part{GENERAL INTRODUCTION}
 \input{content/intro-1-dream-research}
