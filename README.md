@@ -1,4 +1,6 @@
-# Thesis
+# PhD thesis
+
+[![DOI](https://zenodo.org/badge/81837124.svg)](https://zenodo.org/badge/latestdoi/81837124)
 
 This repository contains the LaTeX files and compiled PDF of my PhD manuscript.
 
