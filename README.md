@@ -2,7 +2,6 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1447124.svg)](https://doi.org/10.5281/zenodo.1447124)
 
-
 This repository contains the LaTeX files and compiled PDF of my PhD manuscript.
 
 ## Important
