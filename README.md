@@ -9,6 +9,9 @@ This repository contains the LaTeX files and compiled PDF of my PhD manuscript.
 - Although my PhD defense was held on December 8th 2017, I updated some of the articles with the final peer-reviewed version in September 2018.
 - Some of the studies depicted in this manuscript are not yet published. Please do not cite, reproduce or distribute without my consent.
 
+## Title
+Content and frequency of dream reports: psychological and neurophysiological correlates.
+
 ## Abstract (English)
 
 Humans have been intrigued by their dreams since the dawn of time. Yet, despite millennia of exploration, several questions regarding dreaming are still unresolved. The goal of the present thesis was to improve our understanding of this phenomenon through several studies, involving different methodologies and each addressing a particular aspect of dreaming. First, we investigated the mechanism of dream recall by comparing the cognitive, psychological and brain functioning of high and low dream recallers (HR and LR, respectively) during sleep and wakefulness (Studies 1 to 4). Second, we investigated the content and function of dreaming through an extensive behavioral analysis of the relationship between waking-life and dream content (Study 5). Finally, we leveraged our expertise in sleep science to develop an open-source and comprehensive software dedicated to sleep analysis (Study 6).
